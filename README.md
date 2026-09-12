@@ -11,10 +11,10 @@ Built for the **ShadowFox AI Engineer Intern** project.
 
 | Mode | What it does |
 | --- | --- |
-| 📝 **Summarize** | Turns long notes into clear key points and quick revision material. |
-| ❓ **Generate Quiz** | Creates interactive multiple-choice questions from your study material. |
-| ✍️ **Improve Answer** | Refines draft answers for clarity, structure, and academic tone. |
-| 💡 **Explain Topic** | Breaks down difficult concepts with simple explanations and analogies. |
+| **Summarize** | Turns long notes into clear key points and quick revision material. |
+| **Generate Quiz** | Creates interactive multiple-choice questions from your study material. |
+| **Improve Answer** | Refines draft answers for clarity, structure, and academic tone. |
+| **Explain Topic** | Breaks down difficult concepts with simple explanations and analogies. |
 
 ## Run locally
 
