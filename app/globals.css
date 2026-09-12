@@ -57,7 +57,6 @@ body {
 
 .page-shell {
   min-height: 100vh;
-
   background:
     linear-gradient(
       180deg,
@@ -65,7 +64,6 @@ body {
       var(--brown-dark) 35%,
       var(--brown) 100%
     );
-
   overflow-x: hidden;
 }
 
@@ -145,6 +143,7 @@ body {
 
 .input-header label {
   display: block;
+
   color: var(--black);
   font-size: 1rem;
   font-weight: 600;
