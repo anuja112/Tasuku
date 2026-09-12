@@ -1,13 +1,15 @@
-import { Mode, prompts } from '@/lib/prompts';
-import { GoogleGenAI } from '@google/genai';
 import { NextRequest, NextResponse } from 'next/server';
+import { GoogleGenAI } from '@google/genai';
+import { prompts, type Mode } from '@/lib/prompts';
+
+const ai = new GoogleGenAI({ apiKey: process.env.GEMINI_API_KEY });
 
 export async function POST(req: NextRequest) {
   try {
     const body = await req.json();
     const { mode, content } = body as { mode: Mode; content: string };
 
-    // --- Validation ---
+    // Validation
     if (!mode || !(mode in prompts)) {
       return NextResponse.json(
         { success: false, error: 'Invalid mode selected.' },
@@ -36,25 +38,22 @@ export async function POST(req: NextRequest) {
       );
     }
 
-    // --- Build prompt & call LLM ---
+    //Build prompt & call Gemini 
     const prompt = prompts[mode](content);
-    const apiKey = process.env.GEMINI_API_KEY;
 
-    if (!apiKey) {
-      return NextResponse.json(
-        { success: false, error: 'Gemini API key is not configured.' },
-        { status: 500 }
-      );
-    }
-
-    const gemini = new GoogleGenAI({ apiKey });
-
-    const response = await gemini.models.generateContent({
-      model: 'gemini-3.1-flash-lite-preview',
+    const response = await ai.models.generateContent({
+      model: 'gemini-3.1-flash-lite',
       contents: prompt,
     });
 
     const result = response.text ?? '';
+
+    if (!result) {
+      return NextResponse.json(
+        { success: false, error: 'The AI did not return a response. Please try again.' },
+        { status: 500 }
+      );
+    }
 
     return NextResponse.json({ success: true, result });
   } catch (err) {
