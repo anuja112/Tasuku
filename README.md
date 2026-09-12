@@ -3,11 +3,6 @@
   Tasuku
 </h1>
 
-Tasuku is an AI-powered study assistant that helps students summarize notes, generate quizzes, improve <h1>
-  <img src="./app/icon.svg" width="24" style="vertical-align: middle; margin-right: 8px;" />
-  Tasuku
-</h1>
-
 A focused study companion that turns raw notes into something you can actually use — a clear summary, a quick quiz, a stronger answer, or a simple explanation, all generated on demand from a single text box.
 
 Built for the **ShadowFox AI Engineer Internship** (Beginner Level — AI-powered student utility app).
