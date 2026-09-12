@@ -1,26 +1,32 @@
 # Tasuku
 
-Tasuku is an AI-powered study assistant that can summarize study material, generate quizzes, improve answers, and explain concepts.
+Tasuku is an AI-powered study assistant that helps students summarize notes, generate quizzes, improve written answers, and understand difficult concepts.
+
+Built for the **ShadowFox AI Engineer Intern** project.
+
+## Study modes
+
+| Mode | What it does |
+| --- | --- |
+| 📝 **Summarize** | Turns long notes into clear key points and quick revision material. |
+| ❓ **Generate Quiz** | Creates interactive multiple-choice questions from your study material. |
+| ✍️ **Improve Answer** | Refines draft answers for clarity, structure, and academic tone. |
+| 💡 **Explain Topic** | Breaks down difficult concepts with simple explanations and analogies. |
 
 ## Run locally
 
-Install dependencies and create a `.env.local` file with your Gemini API key:
-
-```env
-GEMINI_API_KEY=your_api_key_here
+```bash
+npm install
 ```
 
-Start the development server:
+Create a `.env.local` file:
+
+```env
+GEMINI_API_KEY=your_gemini_api_key
+```
+
+Then start the app:
 
 ```bash
 npm run dev
-```
-
-Open [http://localhost:3000](http://localhost:3000).
-
-## Checks
-
-```bash
-npm run lint
-npm run build
 ```
