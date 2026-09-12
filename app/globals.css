@@ -1,9 +1,5 @@
 @import "tailwindcss";
 
-/* ========================================
-   TASUKU COLOR SYSTEM
-   ======================================== */
-
 :root {
   --black: #000000;
   --brown-dark: #1F150C;
@@ -18,24 +14,17 @@
   --sage: #38694f;
   --sage-bright: #245b40;
   --danger: #a83d35;
-
   --card: var(--cream);
-
   --text: var(--black);
-
   --border: rgba(65, 45, 21, 0.2);
-
   --shadow:
     0 8px 24px rgba(0, 0, 0, 0.14);
-
 }
 
 @theme inline {
   --color-cream: var(--cream);
-
   --color-primary: var(--brown-dark);
   --color-primary-dark: var(--black);
-
   --color-text: var(--text);
   --color-ink: var(--ink);
   --color-muted: var(--muted);
@@ -45,15 +34,9 @@
   --color-sage: var(--sage);
   --color-sage-bright: var(--sage-bright);
   --color-danger: var(--danger);
-
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
 }
-
-
-/* ========================================
-   BASE
-   ======================================== */
 
 html {
   scroll-behavior: smooth;
@@ -62,30 +45,15 @@ html {
 body {
   margin: 0;
   min-height: 100vh;
-
   background: var(--black);
   color: var(--text);
-
   font-family:
     var(--font-geist-sans),
     system-ui,
     -apple-system,
     sans-serif;
-
   -webkit-font-smoothing: antialiased;
 }
-
-
-/* ========================================
-   PAGE BACKGROUND
-   ======================================== */
-
-/*
-  ONE continuous gradient.
-
-  The important part is that this belongs to
-  the entire page, not a 100vh backdrop.
-*/
 
 .page-shell {
   min-height: 100vh;
@@ -101,11 +69,6 @@ body {
   overflow-x: hidden;
 }
 
-
-/* ========================================
-   HEADER
-   ======================================== */
-
 .site-header {
   border-bottom: 1px solid rgba(225, 220, 201, 0.18);
 }
@@ -113,11 +76,8 @@ body {
 .header-inner {
   max-width: 768px;
   margin: 0 auto;
-
   padding: 28px 20px 24px;
-
   text-align: center;
-
   animation: rise 0.4s ease-out both;
 }
 
@@ -125,67 +85,41 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-
   gap: 14px;
 }
 
 .brand-row h1 {
   margin: 0;
-
   font-family: Georgia, serif;
-
   font-size: clamp(3rem, 6vw, 4.25rem);
-
   font-weight: 400;
-
   letter-spacing: 0.18em;
-
   line-height: 1;
-
   color: var(--cream);
 }
 
 .brand-line {
   width: 48px;
   height: 2px;
-
   flex-shrink: 0;
-
   border-radius: 999px;
-
   background: var(--cream);
-
   opacity: 0.75;
 }
 
 .header-inner p {
   margin: 14px 0 0;
-
   color: rgba(225, 220, 201, 0.78);
-
   font-size: 0.95rem;
-
   letter-spacing: 0.025em;
 }
-
-
-/* ========================================
-   MAIN CONTENT
-   ======================================== */
 
 .content-wrapper {
   width: 100%;
   max-width: 920px;
-
   margin: 0 auto;
-
   padding: 26px 20px 0;
 }
-
-
-/* ========================================
-   MODE SWITCHER
-   ======================================== */
 
 .mode-wrapper {
   margin-bottom: 18px;
@@ -196,67 +130,43 @@ body {
   background: rgba(0, 0, 0, 0.22);
 }
 
-
-/* ========================================
-   INPUT CARD
-   ======================================== */
-
 .input-card {
   overflow: hidden;
-
   border: 1px solid var(--border);
-
   border-radius: 16px;
-
   background: var(--card);
-
   box-shadow: var(--shadow);
 }
 
 .input-header {
   padding: 17px 22px;
-
   border-bottom: 1px solid var(--border);
 }
 
 .input-header label {
   display: block;
-
   color: var(--black);
-
   font-size: 1rem;
-
   font-weight: 600;
 }
 
 .input-card textarea {
   display: block;
-
   width: 100%;
-
   min-height: 210px;
   max-height: 260px;
-
   resize: none;
-
   overflow-y: auto;
-
   border: 0;
   outline: 0;
-
   padding: 18px 22px;
-
   background: transparent;
-
   color: var(--black);
-
   font-family:
     var(--font-geist-sans),
     system-ui,
     sans-serif;
-
   font-size: 15px;
-
   line-height: 1.8;
 }
 
@@ -268,22 +178,14 @@ body {
   outline: none;
 }
 
-
-/* ========================================
-   CHARACTER BAR
-   ======================================== */
-
 .character-bar {
   height: 4px;
-
   background: rgba(65, 45, 21, 0.08);
 }
 
 .character-progress {
   height: 100%;
-
   background: var(--brown);
-
   transition: width 0.25s ease;
 }
 
@@ -295,52 +197,32 @@ body {
   background: var(--black);
 }
 
-
-/* ========================================
-   INPUT FOOTER
-   ======================================== */
-
 .input-footer {
   display: flex;
-
   align-items: center;
   justify-content: space-between;
-
   gap: 12px;
-
   padding: 12px 18px;
 }
 
 .footer-actions {
   display: flex;
-
   align-items: center;
-
   gap: 4px;
 }
 
 .secondary-action {
   display: flex;
-
   align-items: center;
-
   gap: 6px;
-
   padding: 7px 10px;
-
   border: 0;
   border-radius: 8px;
-
   background: transparent;
-
   color: rgba(65, 45, 21, 0.65);
-
   font-size: 0.875rem;
-
   font-weight: 500;
-
   cursor: pointer;
-
   transition:
     background 0.2s ease,
     color 0.2s ease;
@@ -348,33 +230,25 @@ body {
 
 .secondary-action:hover:not(:disabled) {
   background: rgba(65, 45, 21, 0.08);
-
   color: var(--brown-dark);
 }
 
 .secondary-action:disabled {
   opacity: 0.35;
-
   cursor: not-allowed;
 }
 
 .character-count {
   display: flex;
-
   align-items: center;
-
   gap: 12px;
-
   color: rgba(65, 45, 21, 0.7);
-
   font-family: var(--font-geist-mono), monospace;
-
   font-size: 0.75rem;
 }
 
 .too-short {
   font-family: var(--font-geist-sans), sans-serif;
-
   color: var(--brown);
 }
 
@@ -387,72 +261,41 @@ body {
 }
 
 
-/* ========================================
-   ERROR
-   ======================================== */
-
 .error-box {
   display: flex;
-
   align-items: flex-start;
-
   gap: 10px;
-
   margin-top: 14px;
-
   padding: 12px 14px;
-
   border: 1px solid rgba(65, 45, 21, 0.25);
-
   border-radius: 12px;
-
   background: rgba(225, 220, 201, 0.8);
-
   color: var(--brown-dark);
-
   font-size: 0.875rem;
 }
 
-
-/* ========================================
-   GENERATE BUTTON
-   ======================================== */
-
 .generate-button {
   display: flex;
-
   align-items: center;
   justify-content: center;
   gap: 8px;
-
   width: 100%;
-
   margin-top: 18px;
-
   padding: 14px 24px;
-
   border: 2px solid var(--cream);
-
   border-radius: 12px;
-
   background:
     linear-gradient(
       90deg,
       var(--brown-dark),
       var(--brown)
     );
-
   color: var(--cream);
-
   font-size: 1rem;
-
   font-weight: 600;
-
   cursor: pointer;
-
   box-shadow:
     0 6px 18px rgba(0, 0, 0, 0.16);
-
   transition:
     transform 0.15s ease,
     box-shadow 0.2s ease,
@@ -477,20 +320,12 @@ body {
 
 .generate-button:disabled {
   opacity: 0.5;
-
   cursor: not-allowed;
 }
 
-
-/* ========================================
-   RESULT
-   ======================================== */
-
 .result-wrapper {
   margin-top: 22px;
-
   scroll-margin-top: 24px;
-
   animation: rise 0.4s ease-out both;
 }
 
@@ -518,25 +353,16 @@ body {
 }
 
 
-/* ========================================
-   FOOTER
-   ======================================== */
-
 .site-footer {
   padding: 38px 20px 28px;
-
   text-align: center;
-
   color: rgba(225, 220, 201, 0.65);
-
   font-size: 0.75rem;
 }
 
 .site-footer a {
   color: var(--cream);
-
   font-weight: 500;
-
   text-decoration: none;
 }
 
@@ -545,11 +371,6 @@ body {
 
   text-underline-offset: 3px;
 }
-
-
-/* ========================================
-   ANIMATION
-   ======================================== */
 
 @keyframes rise {
   from {
@@ -569,11 +390,6 @@ body {
   }
 }
 
-
-/* ========================================
-   SCROLLBAR
-   ======================================== */
-
 ::-webkit-scrollbar {
   width: 8px;
 }
@@ -584,7 +400,6 @@ body {
 
 ::-webkit-scrollbar-thumb {
   background: rgba(225, 220, 201, 0.3);
-
   border-radius: 999px;
 }
 
@@ -592,21 +407,11 @@ body {
   background: rgba(225, 220, 201, 0.5);
 }
 
-
-/* ========================================
-   FOCUS
-   ======================================== */
-
 :focus-visible {
   outline: 2px solid var(--cream);
-
   outline-offset: 3px;
 }
 
-
-/* ========================================
-   MOBILE
-   ======================================== */
 
 @media (max-width: 640px) {
   .header-inner {

@@ -60,7 +60,7 @@ export default function ResultCard({
         setCopied(false);
       }, 1800);
     } catch {
-      // Ignore clipboard errors
+      // Pass
     }
   };
 

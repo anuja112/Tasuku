@@ -91,7 +91,7 @@ export default function ModeSwitcher({
       onKeyDown={handleKeyDown}
       className="mode-panel relative grid grid-cols-2 gap-1 rounded-2xl border p-1.5 shadow-sm sm:grid-cols-4"
     >
-      {/* Sliding active indicator: two columns on phones, four on larger screens. */}
+      {/* Sliding active indicator */}
       <span
         aria-hidden="true"
         className="pointer-events-none absolute left-1.5 top-1.5 h-[calc((100%-0.75rem)/2)] w-[calc((100%-0.75rem)/2)] rounded-xl bg-cream shadow-sm transition-transform duration-300 ease-out sm:hidden"
