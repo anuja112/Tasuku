@@ -3,11 +3,18 @@
   Tasuku
 </h1>
 
-Tasuku is an AI-powered study assistant that helps students summarize notes, generate quizzes, improve written answers, and understand difficult concepts — all in one simple, mode-based interface.
+Tasuku is an AI-powered study assistant that helps students summarize notes, generate quizzes, improve <h1>
+  <img src="./app/icon.svg" width="24" style="vertical-align: middle; margin-right: 8px;" />
+  Tasuku
+</h1>
 
-Built for the **ShadowFox AI Engineer Intern** project.
+A focused study companion that turns raw notes into something you can actually use — a clear summary, a quick quiz, a stronger answer, or a simple explanation, all generated on demand from a single text box.
 
-## Features
+Built for the **ShadowFox AI Engineer Internship** (Beginner Level — AI-powered student utility app).
+
+## What it does
+
+Paste in your notes or a question, pick a mode, and Tasuku sends it to an LLM with a purpose-built prompt for that task:
 
 | Mode | What it does |
 | --- | --- |
@@ -24,13 +31,6 @@ Built for the **ShadowFox AI Engineer Intern** project.
 - react-markdown + remark-gfm for rendering formatted AI responses
 
 ## Getting Started
-
-### Prerequisites
-
-- Node.js 18+ and npm
-- A [Gemini API key](https://ai.google.dev/gemini-api/docs/api-key)
-
-### Installation
 
 1. Clone the repository:
 
@@ -75,13 +75,10 @@ Tasuku/
 ├── app/            # Next.js app router pages, layout, and API routes
 ├── components/     # UI components (mode switcher, result card, icons)
 ├── lib/            # Prompt templates for each study mode
-└── public/          # Static assets
+└── public/         # Static assets
 ```
 
-## Contributing
+## Author
 
-Contributions, issues, and feature requests are welcome. Feel free to open an issue or submit a pull request.
+Made by [Anuja Ghosal](https://github.com/anuja112).
 
-## License
-
-This project currently has no license specified. Add a `LICENSE` file if you'd like to define usage terms.
