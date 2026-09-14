@@ -1,5 +1,5 @@
 <h1>
-  <img src="./app/icon.svg" width="24" style="vertical-align: middle; margin-right: 8px;" />
+  <img src="./app/icon.png" width="24" style="vertical-align: middle; margin-right: 8px;" />
   Tasuku
 </h1>
 
@@ -11,12 +11,12 @@ Built for the **ShadowFox AI Engineer Internship** (Beginner Level — AI-powere
 
 Paste in your notes or a question, pick a mode, and Tasuku sends it to an LLM with a purpose-built prompt for that task:
 
-| Mode | What it does |
-| --- | --- |
-| **Summarize** | Turns long notes into clear key points and quick revision material. |
-| **Generate Quiz** | Creates interactive multiple-choice questions from your study material. |
-| **Improve Answer** | Refines draft answers for clarity, structure, and academic tone. |
-| **Explain Topic** | Breaks down difficult concepts with simple explanations and analogies. |
+| Mode               | What it does                                                            |
+| ------------------ | ----------------------------------------------------------------------- |
+| **Summarize**      | Turns long notes into clear key points and quick revision material.     |
+| **Generate Quiz**  | Creates interactive multiple-choice questions from your study material. |
+| **Improve Answer** | Refines draft answers for clarity, structure, and academic tone.        |
+| **Explain Topic**  | Breaks down difficult concepts with simple explanations and analogies.  |
 
 ## Tech Stack
 
@@ -56,12 +56,12 @@ Paste in your notes or a question, pick a mode, and Tasuku sends it to an LLM wi
 
 ## Available Scripts
 
-| Command | Description |
-| --- | --- |
-| `npm run dev` | Starts the app in development mode |
-| `npm run build` | Builds the app for production |
-| `npm run start` | Runs the production build |
-| `npm run lint` | Runs ESLint checks |
+| Command         | Description                        |
+| --------------- | ---------------------------------- |
+| `npm run dev`   | Starts the app in development mode |
+| `npm run build` | Builds the app for production      |
+| `npm run start` | Runs the production build          |
+| `npm run lint`  | Runs ESLint checks                 |
 
 ## Project Structure
 
@@ -76,4 +76,3 @@ Tasuku/
 ## Author
 
 Made by [Anuja Ghosal](https://github.com/anuja112).
-
