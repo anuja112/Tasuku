@@ -7,7 +7,6 @@ import {
   QuizIcon,
 } from "@/components/Icons";
 import type { Mode } from "@/lib/prompts";
-import { useRef } from "react";
 
 export type ModeConfig = {
   key: Mode;
@@ -68,33 +67,18 @@ export default function ModeSwitcher({
   onChange: (mode: Mode) => void;
   disabled?: boolean;
 }) {
-  const tabsRef = useRef<(HTMLButtonElement | null)[]>([]);
   const activeIndex = MODES.findIndex((m) => m.key === mode);
-
-  const handleKeyDown = (e: React.KeyboardEvent) => {
-    const delta = e.key === "ArrowRight" ? 1 : e.key === "ArrowLeft" ? -1 : 0;
-
-    if (!delta) return;
-
-    e.preventDefault();
-
-    const next = (activeIndex + delta + MODES.length) % MODES.length;
-
-    onChange(MODES[next].key);
-    tabsRef.current[next]?.focus();
-  };
 
   return (
     <div
       role="tablist"
       aria-label="Study mode"
-      onKeyDown={handleKeyDown}
       className="mode-panel relative grid grid-cols-2 gap-1 rounded-2xl border p-1.5 shadow-sm sm:grid-cols-4"
     >
       {/* Sliding active indicator */}
       <span
         aria-hidden="true"
-        className="pointer-events-none absolute left-1.5 top-1.5 h-[calc((100%-0.75rem)/2)] w-[calc((100%-0.75rem)/2)] rounded-xl bg-cream shadow-sm transition-transform duration-300 ease-out sm:hidden"
+        className="pointer-events-none absolute left-1.5 top-1.5 h-[calc((100%-0.75rem)/2-0.2rem)] w-[calc((100%-0.75rem)/2-0.2rem)] rounded-xl bg-cream shadow-sm transition-transform duration-300 ease-out sm:hidden"
         style={{
           transform: `translate(${activeIndex % 2 ? "calc(100% + 0.25rem)" : "0"}, ${
             activeIndex > 1 ? "calc(100% + 0.25rem)" : "0"
@@ -104,21 +88,18 @@ export default function ModeSwitcher({
 
       <span
         aria-hidden="true"
-        className="pointer-events-none absolute inset-y-1.5 left-1.5 hidden w-[calc((100%-0.75rem)/4)] rounded-xl bg-cream shadow-sm transition-transform duration-300 ease-out sm:block"
+        className="pointer-events-none absolute inset-y-1.5 left-1.5 hidden w-[calc((100%-0.9rem)/4-0.2rem)] rounded-xl bg-cream shadow-sm transition-transform duration-300 ease-out sm:block"
         style={{
           transform: `translateX(${activeIndex ? `calc(${activeIndex * 100}% + ${activeIndex * 0.25}rem)` : "0"})`,
         }}
       />
 
-      {MODES.map(({ key, label, compact, Icon }, i) => {
+      {MODES.map(({ key, label, compact, Icon }) => {
         const selected = key === mode;
 
         return (
           <button
             key={key}
-            ref={(el) => {
-              tabsRef.current[i] = el;
-            }}
             role="tab"
             type="button"
             aria-selected={selected}

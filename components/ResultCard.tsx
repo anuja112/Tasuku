@@ -127,8 +127,8 @@ export default function ResultCard({
             onClick={handleCopy}
             className={`flex shrink-0 items-center gap-1.5 rounded-lg border px-3 py-1.5 text-xs font-medium transition-all ${
               copied
-                ? "border-sage/40 bg-sage/15 text-sage-bright"
-                : "border-line bg-primary-light/30 text-muted hover:border-line-strong hover:bg-sage/10 hover:text-sage-bright"
+                ? "border-sage/70 bg-sage/20 text-sage-bright"
+                : "border-line bg-primary-light/30 text-muted hover:border-line-strong hover:bg-sage/15 hover:text-sage-bright"
             }`}
           >
             {copied ? (
@@ -210,7 +210,7 @@ export default function ResultCard({
                       (concept: string, index: number) => (
                         <span
                           key={index}
-                          className="rounded-full border border-sage/25 bg-sage/10 px-3 py-1.5 text-xs text-sage-bright"
+                          className="rounded-full border border-sage/60 bg-sage/20 px-3 py-1.5 text-xs text-sage-bright"
                         >
                           {concept}
                         </span>
@@ -271,11 +271,11 @@ export default function ResultCard({
                               onClick={() => handleAnswer(index, letter)}
                               className={`flex w-full items-start gap-3 rounded-xl border px-4 py-3 text-left text-sm transition-all ${
                                 isCorrect
-                                  ? "border-sage/50 bg-sage/10 text-primary-dark"
+                                  ? "border-sage/70 bg-sage/25 text-primary-dark"
                                   : isWrong
-                                    ? "border-danger/40 bg-danger/[0.08] text-danger"
+                                    ? "border-danger/60 bg-danger/15 text-danger"
                                     : isSelected
-                                      ? "border-sage/40 bg-sage/10 text-ink"
+                                      ? "border-sage/60 bg-sage/20 text-ink"
                                       : "border-line bg-primary-light/20 text-muted hover:border-line-strong hover:bg-primary-light/50"
                               }`}
                             >
@@ -300,8 +300,8 @@ export default function ResultCard({
                         <div
                           className={`mt-4 rounded-xl border px-4 py-3 ${
                             correct
-                              ? "border-sage/25 bg-sage/[0.06]"
-                              : "border-danger/25 bg-danger/[0.06]"
+                              ? "border-sage/60 bg-sage/15"
+                              : "border-danger/60 bg-danger/15"
                           }`}
                         >
                           <p className="text-xs font-semibold uppercase tracking-wider text-muted">
